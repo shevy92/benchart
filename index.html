@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .mainbox {
+            position: relative;
+            width:725px;            
+        }
+        #one {
+            
+        }
+        .overlay {
+            /*margin-left: 42px;
+            margin-top: -460px;
+            display: block;
+            position: relative;
+            
+              left: 100%;
+              background-color: #008CBA;
+              overflow: hidden;
+              transition: .5s ease;*/
+            margin-left: 42px;
+            margin-top: -465px;
+              position: absolute;
+              
+              left: 0;
+              right: 0;
+              background-color: #d0dffc;
+              overflow: hidden;
+              width: 725px;
+              height: 400px;
+              transition: 10s ease;
+            
+        }
+        /*.mainbox:hover */
+        .overlay2 {
+          width: 0;
+          left: 100%;
+        }
+        button {
+            display: block;
+            position: absolute;
+            margin-top: -300px;
+            margin-left: 350px;
+            color: white;
+            background-color: black;
+            border: none;
+            font-size: 16px;
+            padding: 10px;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <img id="one" src="images/base.png" alt="one">
+        <!--<img class="two" src="images/two2.png" alt="two">-->
+        <div class="overlay" id="poop"></div>
+        <button id="clickme"> View data</button>
+    </div>
+    
+    <script>
+        var button = document.getElementById("clickme");
+        var poop = document.getElementById("poop");
+        button.addEventListener("click", function() {
+        poop.classList.add("overlay2");
+        button.classList.add("hide");
+      });
+    </script>
+</body>
+
+</html>
